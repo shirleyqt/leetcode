@@ -1,3 +1,5 @@
+### [Medium][264] Ugly Number II ###
+
 class Solution(object):
     def nthUglyNumber(self, n):
         """
