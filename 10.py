@@ -1,4 +1,5 @@
 def isMatch(self, s, p):
+    dp = []
     for i in range(len(p)+1):
         dp.append([False] *(len(s)+1))
     dp[0][0] = True
