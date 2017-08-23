@@ -5,11 +5,13 @@ class Solution(object):
         res = []
         stack = [(root, sum-root.val, [root.val])]
         while stack != []:
-            curr, val, ls = stack.pop()
-            if not curr.left and not curr.right and val == 0:
+            curr = stack.pop()
+            val = curr
+            ls = curr
+            if curr.left == None and curr.right == None and val == 0:
                 res.append(ls)
-            if curr.right:
+            if curr.right != None:
                 stack.append((curr.right, val-curr.right.val, ls+[curr.right.val]))
-            if curr.left:
+            if curr.left != None:
                 stack.append((curr.left, val-curr.left.val, ls+[curr.left.val]))
         return res 
